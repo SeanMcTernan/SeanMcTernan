@@ -572,7 +572,7 @@
         "description": "Triggers when an outgoing message or incomming message is handeled",
         "servers": [
           {
-            "url": "<your url>"
+            "url": "https://yourdomain.com/"
           }
         ],
         "operationId": "incomingMessageReport",
@@ -598,7 +598,7 @@
         ,
         "servers": [
           {
-            "url": "<your url>"
+            "url": "https://yourdomain.com/"
           }
         ],
         "operationId": "deliveryMessageReport",
@@ -623,7 +623,7 @@
         "description": "Triggers when client send STOP to your number",
         "servers": [
           {
-            "url": "<your url>"
+            "url": "https://yourdomain.com/"
           }
         ],
         "operationId": "unsubscribeMessageReport",
