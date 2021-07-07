@@ -41,7 +41,7 @@
       "description": "Using the SimpleTexting API, you can send messages programmatically from your server depending on the situation. Send to just one, or many contacts. Whatever your needs may be, we've got you covered. \n\nBelow are some endpoints that allow you to get the most out of our message sending features."
     },
     {
-      "name": "Webhook report",
+      "name": "Webhook Report",
       "description": "Use webhooks to communicate between the SimpleTexting platform and your server. Webhooks can be used to forward messages as well as provide info about unsubscribes and message delivery. \n\nSimpleTexting can trigger webhooks for new incoming messages, delivery reports and unsubscribes. Now you can build scripts that interpret and respond to events that occur in your SimpleTexting account!"
     }
   ],
@@ -582,7 +582,7 @@
     "/report/delivery": {
       "post": {
         "tags": [
-          "Webhook report"
+          "Webhook Report"
         ],
         "summary": "Delivery/Non delivered message report",
         "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
@@ -602,7 +602,7 @@
     "/report/unsubscribe": {
       "post": {
         "tags": [
-          "Webhook report"
+          "Webhook Report"
         ],
         "summary": "Unsubscribe report",
         "description": "Triggers when client send STOP to your number",
