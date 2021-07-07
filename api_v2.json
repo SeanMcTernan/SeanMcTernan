@@ -563,7 +563,7 @@
         }
       }
     },
-    "/report/incomming": {
+    "<your url>/report/incomming": {
       "post": {
         "tags": [
           "Webhook Report"
