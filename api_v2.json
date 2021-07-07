@@ -45,7 +45,7 @@
       "description": "For more powerful integrations, you may need to make custom webhooks that are triggered by certain actions. These actions include Incoming Messages, Outgoing Messages sent by your team, Delivery Reports and much more."
     },
     {
-      "name": "Webhook Report",
+      "name": "Webhook Triggers",
       "description": "Use webhooks to communicate between the SimpleTexting platform and your server. Webhooks can be used to forward messages as well as provide info about unsubscribes and message delivery. \n\nSimpleTexting can trigger webhooks for new incoming messages, delivery reports and unsubscribes. Now you can build scripts that interpret and respond to events that occur in your SimpleTexting account!"
     }
   ],
@@ -566,7 +566,7 @@
     "/report/incoming": {
       "post": {
         "tags": [
-          "Webhook Report"
+          "Webhook Triggers"
         ],
         "summary": "Incomming/Outgoing message report",
         "description": "Triggers when an outgoing message or incomming message is handeled",
@@ -591,11 +591,10 @@
     "/report/delivery": {
       "post": {
         "tags": [
-          "Webhook Report"
+          "Webhook Triggers"
         ],
         "summary": "Delivery/Non delivered message report",
         "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
-        ,
         "servers": [
           {
             "url": "https://yourdomain.com/"
@@ -617,7 +616,7 @@
     "/report/unsubscribe": {
       "post": {
         "tags": [
-          "Webhook Report"
+          "Webhook Triggers"
         ],
         "summary": "Unsubscribe report",
         "description": "Triggers when client send STOP to your number",
