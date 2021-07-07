@@ -563,66 +563,6 @@
         }
       }
     },
-    "*": {
-      "post": {
-        "tags": [
-          "Webhook Report"
-        ],
-        "summary": "Incomming/Outgoing message report",
-        "description": "Triggers when an outgoing message or incoming message is handeled",
-        "operationId": "incomingMessageReport",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/IncommingMessageReport"
-              }
-            }
-          },
-          "required": true
-        }
-      }
-    },
-    "/report/delivery": {
-      "post": {
-        "tags": [
-          "Webhook Report"
-        ],
-        "summary": "Delivery/Non delivered message report",
-        "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
-        "operationId": "deliveryMessageReport",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/DeliveryMessageReport"
-              }
-            }
-          },
-          "required": true
-        }
-      }
-    },
-    "/report/unsubscribe": {
-      "post": {
-        "tags": [
-          "Webhook Report"
-        ],
-        "summary": "Unsubscribe report",
-        "description": "Triggers when client send STOP to your number",
-        "operationId": "unsubscribeMessageReport",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UnsubscribeReport"
-              }
-            }
-          },
-          "required": true
-        }
-      }
-    },
     "/api/messages": {
       "get": {
         "tags": [
@@ -1101,6 +1041,71 @@
               }
             }
           }
+        }
+      }
+    },
+    "servers": [
+      {
+        "url": "<your url>"
+      }
+    ],
+    "/report/incoming": {
+      "post": {
+        "tags": [
+          "Webhook Report"
+        ],
+        "summary": "Incomming/Outgoing message report",
+        "description": "Triggers when an outgoing message or incomming message is handeled",
+        "operationId": "incomingMessageReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncommingMessageReport"
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    },
+    "/report/delivery": {
+      "post": {
+        "tags": [
+          "Webhook Report"
+        ],
+        "summary": "Delivery/Non delivered message report",
+        "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
+        "operationId": "deliveryMessageReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryMessageReport"
+              }
+            }
+          },
+          "required": true
+        }
+      }
+    },
+    "/report/unsubscribe": {
+      "post": {
+        "tags": [
+          "Webhook Report"
+        ],
+        "summary": "Unsubscribe report",
+        "description": "Triggers when client send STOP to your number",
+        "operationId": "unsubscribeMessageReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnsubscribeReport"
+              }
+            }
+          },
+          "required": true
         }
       }
     }
