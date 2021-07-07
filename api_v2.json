@@ -563,14 +563,14 @@
         }
       }
     },
-    "<your url>/report/incomming": {
+    "<your url>/report/incoming": {
       "post": {
         "tags": [
           "Webhook Report"
         ],
         "summary": "Incomming/Outgoing message report",
-        "description": "Triggers when an outgoing message or incomming message is handeled",
-        "operationId": "incommingMessageReport",
+        "description": "Triggers when an outgoing message or incoming message is handeled",
+        "operationId": "incomingMessageReport",
         "requestBody": {
           "content": {
             "application/json": {
