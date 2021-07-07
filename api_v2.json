@@ -562,7 +562,7 @@
     "/report/incomming": {
       "post": {
         "tags": [
-          "Webhook report"
+          "Webhook Report"
         ],
         "summary": "Incomming/Outgoing message report",
         "description": "Triggers when an outgoing message or incomming message is handeled",
