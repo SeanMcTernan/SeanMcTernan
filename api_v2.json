@@ -569,7 +569,7 @@
           "Webhook Reports"
         ],
         "summary": "Incomming/Outgoing message report",
-        "description": "Triggers when an outgoing message or incomming message is handeled",
+        "description": "Triggers when an outgoing message or incomming message is handeled.\n\n**Example:** We create the incoming webhook for 555888 from contact phone 8001234567:\n\n`{\"url\": \"http://www.yourdomain.com/receivesms.php\",\"triggers\": [\"INCOMING_MESSAGE\"],\"requestPerSecLimit\": 25,\"tenantPhone\": \"555888\",\"contactPhone\": \"8001234567\"}`",
         "servers": [
           {
             "url": "https://yourdomain.com/"
