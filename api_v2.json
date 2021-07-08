@@ -566,7 +566,7 @@
     "/report/incoming": {
       "post": {
         "tags": [
-          "Webhook Triggers"
+          "Webhook Reports"
         ],
         "summary": "Incomming/Outgoing message report",
         "description": "Triggers when an outgoing message or incomming message is handeled",
@@ -591,7 +591,7 @@
     "/report/delivery": {
       "post": {
         "tags": [
-          "Webhook Triggers"
+          "Webhook Reports"
         ],
         "summary": "Delivery/Non delivered message report",
         "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
@@ -616,7 +616,7 @@
     "/report/unsubscribe": {
       "post": {
         "tags": [
-          "Webhook Triggers"
+          "Webhook Reports"
         ],
         "summary": "Unsubscribe report",
         "description": "Triggers when client send STOP to your number",
