@@ -594,7 +594,7 @@
           "Webhook Reports"
         ],
         "summary": "Delivery/Non delivered message report",
-        "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.",
+        "description": "Triggers when an outgoing message is reported as delivered or undelivered by the carrier.\n\n**Example:** We create the Delivery report for 555888 for the status of the outgoing messages to 8001234567:\n\n`{\"url\": \"http://www.yourdomain.com/receivesms.php\",\"triggers\": [\"DELIVERY_REPORT\"],\"requestPerSecLimit\": 25,\"tenantPhone\": \"555888\",\"contactPhone\": \"8001234567\"}`",
         "servers": [
           {
             "url": "https://yourdomain.com/"
