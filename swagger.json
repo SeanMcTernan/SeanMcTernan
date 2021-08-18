@@ -5112,7 +5112,7 @@
                 "type": "apiKey",
                 "name": "token",
                 "in": "query",
-                "description": "Using your API key, you can authenticate your account directly in the URL parameter of your request. Please note: Api token auth is only available for users that started using the v1 api before 09.01.2021"
+                "description": "Using your API key, you can authenticate your account directly in the URL parameter of your request. Please note: Api token auth is only available for users that started using the v1 api before 09.01.2021."
             }
         }
     }
