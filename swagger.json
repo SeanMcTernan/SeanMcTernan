@@ -4994,21 +4994,6 @@
                     }
                 }
             },
-            "duplicateContact": {
-                "type": "object",
-                "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "-610",
-                        "example": -610
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "Contact with the same email address already exists",
-                        "example": "Contact with the same email address already exists"
-                    }
-                }
-            },
             "unknownCustomField": {
                 "type": "object",
                 "properties": {
