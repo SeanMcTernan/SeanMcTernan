@@ -1047,7 +1047,7 @@
           {
             "name": "directionType",
             "in": "query",
-            "description": "MO/MT (mobile terminated) refers to sent messages. MO (mobile originated) refers to received messages",
+            "description": "The direction in which the message was sent:\n\n  - **MO:** Refers to `Mobile Terminating`, meaning messages sent *to* the contacts' cellphone\n\n  - **MO:** Refers to `Mobile Originating`, meaning messages sent *from* the contacts cellphone",
             "required": false,
             "schema": {
               "type": "string",
