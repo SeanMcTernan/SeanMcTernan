@@ -1797,7 +1797,7 @@
             "type": "string",
             "example": "507f191e810c19729de860ea"
           },
-          "refType": {
+          "type": {
             "description": "Webhook report content type",
             "type": "string",
             "example": "UNSUBSCRIBE_REPORT",
@@ -1840,7 +1840,7 @@
             "type": "string",
             "example": "507f191e810c19729de860ea"
           },
-          "refType": {
+          "type": {
             "description": "Webhook report content type",
             "type": "string",
             "example": "OUTGOING_MESSAGE",
@@ -1868,7 +1868,7 @@
                   "EXTENDED_SMS"
                 ]
               },
-              "refType": {
+              "referenceType": {
                 "description": "Reference type (available only for MT messages)\n\n**Example:** `API`",
                 "type": "string",
                 "example": "API"
@@ -1905,7 +1905,7 @@
             "type": "string",
             "example": "507f191e810c19729de860ea"
           },
-          "refType": {
+          "type": {
             "description": "Webhook report content type",
             "type": "string",
             "example": "INCOMING_MESSAGE",
@@ -1975,7 +1975,7 @@
                   "EXTENDED_SMS"
                 ]
               },
-              "refType": {
+              "referenceType": {
                 "description": "Reference type (available only for MT messages)\n\n**Example:** `API`",
                 "type": "string",
                 "example": "API"
