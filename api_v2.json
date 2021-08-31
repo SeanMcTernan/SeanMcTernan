@@ -1511,7 +1511,7 @@
             "example": "https://example.com"
           },
           "triggers": {
-            "description": "Trigger a webhook based on a specific platform event:\n\n  - **INCOMING_MESSAGE:** Trigger a webhook event based on an incoming message\n\n  - **OUTGOING_MESSAGE:** Trigger a webhook event based on an outgoing message\n\n  - **DELIVERY_REPORT:** Trigger a webhook when a delivery confirmation is received from a contact\n\n  - **NON_DELIVERED_REPORT:** Trigger a webhook when a failed delivery is reported from a contact\n\n  - **UNSUBSCRIBE_REPORT:** Trigger a webhook when a contact unsubscribes",
+            "description": "Trigger a webhook based on a specific platform event:\n\n  - **INCOMING_MESSAGE:** Trigger a webhook event based on an incoming message\n\n  - **OUTGOING_MESSAGE:** Trigger a webhook event based on an outgoing message\n\n  - **DELIVERY_REPORT:** Trigger a webhook when a delivery confirmation is received from a contact\n\n  - **NON_DELIVERED_REPORT:** Trigger a webhook when a failed delivery is reported from a contact\n\n  - **UNSUBSCRIBE_REPORT:** Trigger a webhook when a contact unsubscribes\n\n**Example:** `UNSUBSCRIBE_REPORT`",
             "type": "array",
             "example": [
               "INCOMING_MESSAGE"
@@ -1798,7 +1798,7 @@
             "example": "507f191e810c19729de860ea"
           },
           "type": {
-            "description": "Webhook report content type",
+            "description": "Webhook report content type: \n\n  - **INCOMING_MESSAGE:** Triggered when an incoming message is received\n\n  - **OUTGOING_MESSAGE:** Triggered when an outgoing message is received\n\n  - **DELIVERY_REPORT:** Triggered when a delivery confirmation is received from your contacts carrier\n\n  - **NON_DELIVERED_REPORT:** Triggered when a failed delivery is received from your contacts carrier\n\n  - **UNSUBSCRIBE_REPORT:** Triggered when a contact unsubscribes\n\n**Example:** `UNSUBSCRIBE_REPORT`",
             "type": "string",
             "example": "UNSUBSCRIBE_REPORT",
             "enum": [
