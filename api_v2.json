@@ -278,7 +278,7 @@
           {
             "name": "direction",
             "in": "query",
-            "description": "Specify the sort order of your results. By default, results are sorted by the 'updated' field.",
+            "description": "Specify the sort order of your results. By default, results are sorted by the 'updated' field:\n\n  - **ASC:** Sort values in *ascending* order\n\n  - **DESC:** Sort values in *descending* order",
             "required": false,
             "schema": {
               "type": "string",
