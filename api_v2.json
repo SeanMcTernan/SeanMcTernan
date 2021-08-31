@@ -1511,7 +1511,7 @@
             "example": "https://example.com"
           },
           "triggers": {
-            "description": "Trigger a webhook based on a specific platform event\n\n**Example:** `INCOMING_MESSAGE`",
+            "description": "Trigger a webhook based on a specific platform event:\n\n  - **INCOMING_MESSAGE:** Trigger a webhook event based on an incoming message\n\n  - **OUTGOING_MESSAGE:** Trigger a webhook event based on an outgoing message\n\n  - **DELIVERY_REPORT:** Trigger a webhook when a delivery confirmation is received from a contact\n\n  - **NON_DELIVERED_REPORT:** Trigger a webhook when a failed delivery is reported from a contact\n\n  - **UNSUBSCRIBE_REPORT:** Trigger a webhook when a contact unsubscribes",
             "type": "array",
             "example": [
               "INCOMING_MESSAGE"
