@@ -539,7 +539,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "The current state of the campaigns you wish to retrieve:\n\n  - **DRAFT:** Returns all those campaigns in Draft mode\n\n  - **PAUSED:** Returns Paused campaigns on your account\n\n  - **SENT:** Returns all campaigns sent on your account\n\n  - **SCHEDULED:** Returns any campaign you may have scheduled on your account\n\n**Example:** `state=SENT`",
+            "description": "The current state of the campaigns you wish to retrieve:\n\n  - **DRAFT:** Returns all those campaigns in Draft mode\n\n  - **PAUSED:** Returns Paused campaigns on your account\n\n  - **SENT:** Returns all campaigns sent on your account\n\n  - **SCHEDULED:** Returns any campaign you may have scheduled on your account",
             "required": false,
             "schema": {
               "type": "string",
@@ -1032,7 +1032,7 @@
           {
             "name": "category",
             "in": "query",
-            "description": "Category is only available for messages you send",
+            "description": "Category is only available for messages you send:\n\n  - **SMS:** Returns all SMS messages. SMS are regular texts, 140 characters or below\n\n  - **MMS:** Returns all Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Returns all extended SMS messages, those message who are above 140 characters, but below 360 characters",
             "required": false,
             "schema": {
               "type": "string",
