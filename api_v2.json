@@ -1032,7 +1032,7 @@
           {
             "name": "category",
             "in": "query",
-            "description": "Category is only available for messages you send:\n\n  - **SMS:** Returns all SMS messages. SMS are regular texts, 140 characters or below\n\n  - **MMS:** Returns all Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Returns all extended SMS messages, those message who are above 140 characters, but below 360 characters",
+            "description": "Category is only available for messages you send:\n\n  - **SMS:** Returns all SMS messages. SMS are regular texts, 140 characters or below\n\n  - **MMS:** Returns all Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Returns all extended SMS messages, those messages who are above 140 characters, but below 360 characters",
             "required": false,
             "schema": {
               "type": "string",
@@ -1047,7 +1047,7 @@
           {
             "name": "directionType",
             "in": "query",
-            "description": "The direction in which the message was sent:\n\n  - **MO:** Refers to `Mobile Terminating`, meaning messages sent *to* the contacts' cellphone\n\n  - **MO:** Refers to `Mobile Originating`, meaning messages sent *from* the contacts cellphone",
+            "description": "The direction in which the message was sent:\n\n  - **MO:** Refers to `Mobile Terminating`, meaning messages sent *to* the contacts' cellphone\n\n  - **MO:** Refers to `Mobile Originating`, meaning messages sent *from* the contacts' cellphone",
             "required": false,
             "schema": {
               "type": "string",
@@ -1670,7 +1670,7 @@
             "example": "Hello! How are you?"
           },
           "mode": {
-            "description": "Determines how your message will be presented:\n\n**AUTO: **this means that SimpleTexting will find more relative types for your message content\n\n**SMS_STRICTLY: **this will send only a single SMS or return an error\n\n**MMS: **this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers\n\n**Example:** `SINGLE_SMS_STRICTLY`",
+            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers' carrier\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.\n\n**Example:** `SINGLE_SMS_STRICTLY`",
             "type": "string",
             "example": "MMS_STRICTLY",
             "enum": [
