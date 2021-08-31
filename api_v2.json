@@ -539,7 +539,7 @@
           {
             "name": "state",
             "in": "query",
-            "description": "The the current state of the campaigns you wish to retrieve",
+            "description": "The current state of the campaigns you wish to retrieve:\n\n  - **DRAFT:** Returns all those campaigns in Draft mode\n\n  - **PAUSED:** Returns Paused campaigns on your account\n\n  - **SENT:** Returns all campaigns sent on your account\n\n  - **SCHEDULED:** Returns any campaign you may have scheduled on your account\n\n**Example:** `state=SENT`",
             "required": false,
             "schema": {
               "type": "string",
@@ -1624,7 +1624,7 @@
             "example": "8005551234"
           },
           "mode": {
-            "description": "Determines how your message will be presented:\n\n  - **AUTO** - this means that SimpleTexting will find more relative types for your message content\n\n  - **SMS_STRICTLY** this will send only a single SMS or return an error\n\n  - **MMS** MMS: this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers' carrier\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
+            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers' carrier\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
             "type": "string",
             "example": "MMS_STRICTLY",
             "enum": [
