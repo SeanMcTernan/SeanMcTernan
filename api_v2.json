@@ -1487,7 +1487,7 @@
             "example": 20
           },
           "accountPhone": {
-            "description": "Optional: requests will come exclusively for the specified tenant phone number\n\n**Example:** `8881234567`",
+            "description": "Optional: requests will come exclusively for the specified account phone number\n\n**Example:** `8881234567`",
             "type": "string",
             "example": "8881234567"
           },
@@ -1537,7 +1537,7 @@
             "example": 15
           },
           "accountPhone": {
-            "description": "Optional: requests will come exclusively for the specified tenant phone number\n\n**Example:** `8881234567`",
+            "description": "Optional: requests will come exclusively for the specified account phone number\n\n**Example:** `8881234567`",
             "type": "string",
             "example": "8881234567"
           },
@@ -1584,7 +1584,7 @@
             "format": "int32"
           },
           "accountPhone": {
-            "description": "Optional: requests will come exclusively for the specified tenant phone number",
+            "description": "Optional: requests will come exclusively for the specified account phone number",
             "type": "string"
           },
           "contactPhone": {
@@ -1703,7 +1703,7 @@
         "type": "object",
         "properties": {
           "detectedCategory": {
-            "description": "Autodetected category of message\n\n**Example:** `SMS`",
+            "description": "Autodetected category of message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages who are above 140 characters, but below 360 characters**Example:** `SMS`",
             "type": "string",
             "example": "SMS",
             "enum": [
