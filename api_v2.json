@@ -1703,7 +1703,7 @@
         "type": "object",
         "properties": {
           "detectedCategory": {
-            "description": "Autodetected category of message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
+            "description": "Autodetected category of message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters\n\n**Example:** `SMS`",
             "type": "string",
             "example": "SMS",
             "enum": [
@@ -1855,7 +1855,7 @@
                 "example": "507f191e810c19729de860ea"
               },
               "category": {
-                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
+                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters\n\n**Example:** `SMS`",
                 "type": "string",
                 "example": "SMS",
                 "enum": [
@@ -1959,7 +1959,7 @@
                 "example": "2020-04-28T23:20:08.489Z"
               },
               "category": {
-                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
+                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters\n\n**Example:** `SMS`",
                 "type": "string",
                 "example": "SMS",
                 "enum": [
@@ -2468,7 +2468,7 @@
             ]
           },
           "category": {
-            "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
+            "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters\n\n**Example:** `SMS`",
             "type": "string",
             "example": "SMS",
             "enum": [
@@ -2681,7 +2681,7 @@
             "type": "object",
             "properties": {
               "category": {
-                "description": "The detected category of the message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
+                "description": "The detected category of the message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters\n\n**Example:** `SMS`",
                 "type": "string",
                 "enum": [
                   "SMS",
