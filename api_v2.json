@@ -1837,7 +1837,7 @@
             "example": "507f191e810c19729de860ea"
           },
           "type": {
-            "description": "Webhook report content type:\n\n  - **DELIVERY_REPORT:** Triggered when a delivery confirmation is received from your contacts carrier\n\n  - **NON_DELIVERY_REPORT:** Triggered when a failed delivery is reported from your contacts carrier\n\n**Example:** `NON_DELIVERY_REPORT`",
+            "description": "Webhook report content type:\n\n  - **DELIVERY_REPORT:** Triggered when a delivery confirmation is received from your contacts' carrier\n\n  - **NON_DELIVERY_REPORT:** Triggered when a failed delivery is reported from your contacts' carrier\n\n**Example:** `NON_DELIVERY_REPORT`",
             "type": "string",
             "example": "NON_DELIVERY_REPORT",
             "enum": [
