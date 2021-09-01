@@ -1802,10 +1802,6 @@
             "type": "string",
             "example": "UNSUBSCRIBE_REPORT",
             "enum": [
-              "INCOMING_MESSAGE",
-              "OUTGOING_MESSAGE",
-              "DELIVERY_REPORT",
-              "NON_DELIVERED_REPORT",
               "UNSUBSCRIBE_REPORT"
             ]
           },
@@ -1843,10 +1839,10 @@
           "type": {
             "description": "Webhook report content type:\n\n  - **DELIVERY_REPORT:** Triggered when a delivery confirmation is received from your contacts carrier\n\n  - **NON_DELIVERY_REPORT:** Triggered when a failed delivery is reported from your contacts carrier\n\n**Example:** `NON_DELIVERY_REPORT`",
             "type": "string",
-            "example": "OUTGOING_MESSAGE",
+            "example": "NON_DELIVERY_REPORT",
             "enum": [
-              "INCOMING_MESSAGE",
-              "OUTGOING_MESSAGE"
+              "DELIVERY_REPORT",
+              "NON_DELIVERY_REPORT"
             ]
           },
           "values": {
@@ -1911,10 +1907,7 @@
             "example": "INCOMING_MESSAGE",
             "enum": [
               "INCOMING_MESSAGE",
-              "OUTGOING_MESSAGE",
-              "DELIVERY_REPORT",
-              "NON_DELIVERED_REPORT",
-              "UNSUBSCRIBE_REPORT"
+              "OUTGOING_MESSAGE"
             ]
           },
           "values": {
