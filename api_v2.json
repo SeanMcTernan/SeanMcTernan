@@ -1624,7 +1624,7 @@
             "example": "8005551234"
           },
           "mode": {
-            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers' carrier\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
+            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
             "type": "string",
             "example": "MMS_STRICTLY",
             "enum": [
@@ -1703,7 +1703,7 @@
         "type": "object",
         "properties": {
           "detectedCategory": {
-            "description": "Autodetected category of message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages who are above 140 characters, but below 360 characters**Example:** `SMS`",
+            "description": "Autodetected category of message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
             "type": "string",
             "example": "SMS",
             "enum": [
@@ -1855,7 +1855,7 @@
                 "example": "507f191e810c19729de860ea"
               },
               "category": {
-                "description": "Message category\n\n**Example:** `SMS`",
+                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
                 "type": "string",
                 "example": "SMS",
                 "enum": [
@@ -1959,7 +1959,7 @@
                 "example": "2020-04-28T23:20:08.489Z"
               },
               "category": {
-                "description": "Message category\n\n**Example:** `SMS`",
+                "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
                 "type": "string",
                 "example": "SMS",
                 "enum": [
@@ -2222,7 +2222,7 @@
             "example": "507f1f77bcf86cd799439011"
           },
           "errorCode": {
-            "description": "Operation error code, if operation has failed\n\n**Example:** `CONTACT_CREATE_FAILED`",
+            "description": "Operation error code, if operation has failed:\n\n  - **CONTACT_CREATE_INTERNAL_ERROR:** An internal error has occurred, please reach out to SimpleTexting support for further investigation\n\n  - **CONTACT_UPDATE_INTERNAL_ERROR:** An internal error has occurred, please reach out to SimpleTexting support for further investigation\n\n  - **CONTACT_IMPORT_LIMIT_IS_REACHED:** Your account has reached its import limit. Please reach out to SimpleTexting support to raise this limit\n\n  - **CONTACT_CREATE_FAILED:** Some error occurred while creating your contact. Please reach out to SimpleTexting support for further investigation\n\n  - **CONTACT_IMPORT_LIMIT_IS_REACHED:** Your account has reached its import limit. Please reach out to SimpleTexting support to raise this limit\n\n  - **CONTACT_UPDATE_FAILED:** Some error occurred while updating your contact. Please reach out to SimpleTexting support for further investigation\n\n**Example:** `CONTACT_CREATE_FAILED`",
             "type": "string",
             "example": "CONTACT_CREATE_FAILED",
             "enum": [
@@ -2295,7 +2295,7 @@
             "example": "507f1f77bcf86cd799439011"
           },
           "errorCode": {
-            "description": "Contact's phone number from the delete request\n\n**Example:** `UNKNOWN_CONTACT_PHONE`",
+            "description": "Contact's phone number from the delete request\n\n  - **UNKNOWN_CONTACT_PHONE:** A contact with that phone number could not be found on your account\n\n  - **CONTACT_DELETE_INTERNAL_ERROR:** An internal error has occurred, please reach out to SimpleTexting support for further investigation\n\n**Example:** `UNKNOWN_CONTACT_PHONE`",
             "type": "string",
             "example": "UNKNOWN_CONTACT_PHONE",
             "enum": [
@@ -2398,7 +2398,7 @@
             "example": "8005551234"
           },
           "directionType": {
-            "description": "MT/MO (Mobile-Terminated / Mobile-Originated)\n\n**Example:** `MO`",
+            "description": "The direction in which the message was sent:\n\n  - **MO:** Refers to `Mobile Terminating`, meaning messages sent *to* the contacts' cellphone\n\n  - **MO:** Refers to `Mobile Originating`, meaning messages sent *from* the contacts' cellphone",
             "type": "string",
             "example": "MO",
             "enum": [
@@ -2413,7 +2413,7 @@
             "example": "2020-04-28T23:20:08.489Z"
           },
           "referenceType": {
-            "description": "Reference type (available only for MT messages)\n\n**Example:** `API`",
+            "description": "Reference type (available only for MT (Mobile-Terminating) messages)\n\n**Example:** `API`",
             "type": "string",
             "example": "API_SEND",
             "enum": [
@@ -2468,7 +2468,7 @@
             ]
           },
           "category": {
-            "description": "Message category\n\n**Example:** `SMS`",
+            "description": "Message category:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
             "type": "string",
             "example": "SMS",
             "enum": [
@@ -2681,14 +2681,14 @@
             "type": "object",
             "properties": {
               "category": {
-                "description": "The detected category of the message\n\n**Example:** `EXTENDED_SMS`",
+                "description": "The detected category of the message:\n\n  - **SMS:** SMS are regular texts, 140 characters or below\n\n  - **MMS:** Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Messages which are above 140 characters, but below 360 characters**Example:** `SMS`",
                 "type": "string",
                 "enum": [
                   "SMS",
                   "MMS",
                   "EXTENDED_SMS"
                 ],
-                "example": "EXTENDED_SMS"
+                "example": "MMS"
               },
               "subject": {
                 "description": "The message Subject (available for MMS)\n\n**Example:** `Some message from SimpleTexting`",
@@ -2776,7 +2776,7 @@
             "type": "object",
             "properties": {
               "mode": {
-                "description": "SMS OR MMS? AUTO by default\n\n**Example:** `MMS_PREFERRED`",
+                "description": "SMS OR MMS? AUTO by default: \n\n  - **AUTO:** this means that SimpleTexting willl automatically determine the type of message you would like to send\n\n  - **SINGLE_SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS_PREFERRED:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.\n\n**Example:** `MMS_PREFERRED`",
                 "type": "string",
                 "enum": [
                   "AUTO",
