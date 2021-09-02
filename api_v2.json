@@ -2719,7 +2719,7 @@
             }
           },
           "origin": {
-            "description": "The origin of the campaign. \n\n**Example:** `API_V2`",
+            "description": "The origin of the campaign will be `API_V2` if sent via the API, it will be `null` in all other cases\n\n**Example:** `API_V2`",
             "type": "string",
             "enum": [
               "API_V2"
