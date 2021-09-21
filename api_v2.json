@@ -2725,6 +2725,39 @@
               "API_V2"
             ],
             "example": "API_V2"
+          },
+          "outcome": {
+            "description": "The available stats for the campaign that was retrieved\n\n**Example:** `{\"successRate\": 100,\"optOutRate\": 0,\"totalSent\": 1000,\"creditsTotal\": 1000}`",
+            "type": "object",
+            "properties": {
+              "successRate": {
+                "description": "The sucsess rate of the campaign",
+                "type": "integer",
+                "example": 100
+              },
+              "optOutRate": {
+                "description": "The opt out rate of the campaign",
+                "type": "integer",
+                "example": 0
+              },
+              "totalSent": {
+                "description": "The total number of messages sent in the campaign",
+                "type": "integer",
+                "example": 1000
+              },
+              "creditsTotal": {
+                "description": "The total number of credits used",
+                "type": "integer",
+                "example": 1000
+              }
+            },
+            "example": 
+              {
+                "successRate": 100,
+                "optOutRate": 0,
+                "totalSent": 1000,
+                "creditsTotal": 1000
+              }
           }
         }
       },
