@@ -2758,6 +2758,38 @@
                 "totalSent": 1000,
                 "creditsTotal": 1000
               }
+          },
+          "trackingLinks": {
+            "description": "The links that were tracked with the campaign, if available\n\n**Example:** `{\"url\": \"www.simpletexting.net\",\"clickCount\": 550}`",
+            "type": "array",
+            "example": [
+              {
+                "url": "www.simpletexting.net",
+                "clickCount": 550
+              }
+            ],
+            "items": {
+              "description": "The tracked links and the number of clicks they received",
+              "type": "object",
+              "properties": {
+                "url": {
+                  "description": "The links that were tracked in the sent campaign",
+                  "type": "string",
+                  "example": "www.simpletexting.net"
+                },
+                "clickCount": {
+                  "description": "The number of clicks the links received",
+                  "type": "integer",
+                  "example": 550
+                }
+              },
+              "example":[
+                {
+                  "url": "www.simpletexting.net",
+                  "clickCount": 550
+                }
+              ]
+            }
           }
         }
       },
