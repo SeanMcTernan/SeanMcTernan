@@ -1001,7 +1001,7 @@
           {
             "name": "accountPhone",
             "in": "query",
-            "description": "The phone number on your account the messages were sent to. If blank, the request will return all messages to all numbers",
+            "description": "The phone number on your account the messages were sent to. If blank, the request will return the messages sent to the primary account phone",
             "required": false,
             "schema": {
               "type": "string"
@@ -1030,9 +1030,9 @@
             "example": 8001234567
           },
           {
-            "name": "category",
+            "name": "referenceType",
             "in": "query",
-            "description": "Category is only available for messages you send:\n\n  - **SMS:** Returns all SMS messages. SMS are regular texts, 140 characters or below\n\n  - **MMS:** Returns all Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Returns all extended SMS messages, those messages who are above 140 characters, but below 360 characters",
+            "description": "Reference Type is only available for messages you send:\n\n  - **SMS:** Returns all SMS messages. SMS are regular texts, 140 characters or below\n\n  - **MMS:** Returns all Multi-Media messages. Messages over 306 characters, or with media attached\n\n  - **EXTENDED_SMS:** Returns all extended SMS messages, those messages who are above 140 characters, but below 360 characters",
             "required": false,
             "schema": {
               "type": "string",
@@ -1501,7 +1501,8 @@
       "WebhookRequest": {
         "required": [
           "triggers",
-          "url"
+          "url",
+          "requestPerSecLimit"
         ],
         "type": "object",
         "properties": {
