@@ -59,7 +59,8 @@
       "name": "Webhook Reports",
       "description": "Use webhooks to communicate between the SimpleTexting platform and your server. Webhooks can be used to forward messages as well as provide info about unsubscribes and message delivery. SimpleTexting can trigger webhooks for new incoming messages, delivery reports and unsubscribes."
     }
-  ],  "x-tagGroups": [
+  ],
+  "x-tagGroups": [
     {
       "name": "Campaigns & Messages",
       "tags": [
@@ -1048,7 +1049,7 @@
           "Messages"
         ],
         "summary": "Send a Message",
-        "description": "Send either an MMS or SMS message to a contact. Use this programmatically to send to multiple contacts.\n\nIf the message contains a link from a common third-party link shortener such as [bit.ly](http://bit.ly/), it will appear from our URL shortener instead and occupy 20 characters. [Learn more](https://help.simpletexting.com/en/articles/3362741-why-carriers-don-t-allow-bit-ly-and-other-third-party-link-shorteners).\n\nThere are limitations on Media Files with MMS messages. The size limitations of these items are discussed [here](#tag/File-Information).\n\n**Example:** Below, we have an example of an MMS message being sent. We specified that we wanted to send an `MMS` message to `1234567` from one of the numbers on our account - `8005551234`. We also provided some fallback text, should the receiving cellphone be unable to receive an MMS, and provided a link/id to the media we wished to attach:\n\n`{ \"contactPhone\": \"1234567890\", \"accountPhone\": \"8005551234\", \"mode\": \"MMS_STRICTLY\", \"text\": \"Hello! How are you?\", \"subject\": \"Some message from SimpleTexting\", \"fallbackText\": \"[url=%%fallback_link%%]\", \"mediaItems\": [ \"https://txt.so/img.jpg\", \"507f1f77bcf86cd799439011\" ] }`",
+        "description": "Send either an MMS or SMS message to a contact. Use this programmatically to send to multiple contacts.\n\nIf the message contains a link from a common third-party link shortener such as [bit.ly](http://bit.ly/), it will appear from our URL shortener instead and occupy 20 characters. [Learn more](https://help.simpletexting.com/en/articles/3362741-why-carriers-don-t-allow-bit-ly-and-other-third-party-link-shorteners).\n\nThere are limitations on Media Files with MMS messages. The size limitations of these items are discussed [here](#tag/File-Information).\n\n**Example:** Below, we have an example of an MMS message being sent. We specified that we wanted to send an `MMS` message to `1234567` from one of the numbers on our account - `8005551234`. We also provided some fallback text, should the receiving cellphone be unable to receive an MMS, and provided a link/id to the media we wished to attach:\n\n`{ \"contactPhone\": \"1234567890\", \"accountPhone\": \"8005551234\", \"mode\": \"MMS_PREFERRED\", \"text\": \"Hello! How are you?\", \"subject\": \"Some message from SimpleTexting\", \"fallbackText\": \"[url=%%fallback_link%%]\", \"mediaItems\": [ \"https://txt.so/img.jpg\", \"507f1f77bcf86cd799439011\" ] }`",
         "operationId": "createMessage",
         "requestBody": {
           "content": {
@@ -1312,7 +1313,7 @@
           "Contacts - Batch Operations"
         ],
         "summary": "Update a group of contacts",
-        "description": "Update multiple fields at once for a batch of contacts. You can update their first name, last name, emails, lists, and more.\n\n**Example:** Here we update two contacts, seen here in the array. The list replacement is set to true, so they will be removed from their existing list and added to a new one:\n\n`{ \"updates\": [ { \"contactPhone\": \"1234567890\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"email\": \"john.doe@simpletexting.net\", \"birthday\": \"1985-05-05\", \"customFields\": { \"zipcode\": \"12345\" }, \"comment\": \"VIP client\", \"listIds\": [ \"507f191e810c19729de860ea\", \"My First List\" ] },{ \"contactPhone\": \"0987654321\", \"firstName\": \"Jane\", \"lastName\": \"Doe\", \"email\": \"jane.doe@simpletexting.net\", \"birthday\": \"1984-05-05\", \"customFields\": { \"zipcode\": \"54321\" }, \"comment\": \"VIP client\", \"listIds\": [ \"507f191e810c19729de860ea\", \"My First List\" ] } ], \"listsReplacement\": true }`",
+        "description": "Update multiple fields at once for a batch of contacts. You can update their first name, last name, emails, lists, and more.\n\n**Example:** Here we are updating two contacts, seen in the array. The list replacement is set to true, so they will be removed from their existing list and added to a new one:\n\n`{ \"updates\": [ { \"contactPhone\": \"1234567890\", \"firstName\": \"John\", \"lastName\": \"Doe\", \"email\": \"john.doe@simpletexting.net\", \"birthday\": \"1985-05-05\", \"customFields\": { \"zipcode\": \"12345\" }, \"comment\": \"VIP client\", \"listIds\": [ \"507f191e810c19729de860ea\", \"My First List\" ] },{ \"contactPhone\": \"0987654321\", \"firstName\": \"Jane\", \"lastName\": \"Doe\", \"email\": \"jane.doe@simpletexting.net\", \"birthday\": \"1984-05-05\", \"customFields\": { \"zipcode\": \"54321\" }, \"comment\": \"VIP client\", \"listIds\": [ \"507f191e810c19729de860ea\", \"My First List\" ] } ], \"listsReplacement\": true }`\n\n Step 1: Start the task for the batch update with the above parameters. As a result, you receive the task id.\n\n Example:\n\n `{ \"id\": \"6176fb3e141c0060668b2c03\" }`\n\n Step 2: Request the task result by adding task id from Step 1 to the [Get update result](#operation/getBatchUpdateResults) request.\n\n Example:\n\n`{\n  \"status\": \"DONE\",\n  \"results\": \n[{ \"done\": true,\n  \"contactPhone\": \"1234567890\",\n  \"contactId\": \"6176f999141c0060668b258e\" },\n{ \"done\": true,\n\"contactPhone\": \"0987654321\",\n\"contactId\": \"1236f555141c0060668b123e\"}],\n\"requestedCount\": 2,\n\"processedCount\": 2\n }`",
         "operationId": "processBatchUpdate",
         "requestBody": {
           "content": {
@@ -1324,6 +1325,40 @@
           },
           "required": true
         },
+        "responses": {
+          "201": {
+            "description": "Success. Contacts were successfully updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseID"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/contacts-batch/batch-update/{taskId}": {
+      "get": {
+        "tags": [
+          "Contacts - Batch Operations"
+        ],
+        "summary": "Get the result of batch update task",
+        "description": "Return result of batch update by task id.",
+        "operationId": "getBatchUpdateResults",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "description": "The id of the task for the batch update",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "6176fb3e141c0060668b2c03"
+          }
+        ],
         "responses": {
           "201": {
             "description": "Success. Contacts were successfully updated.",
@@ -1596,13 +1631,13 @@
             "example": "8005551234"
           },
           "mode": {
-            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SINGLE_SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
+            "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SINGLE_SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS_PREFERRED:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.",
             "type": "string",
-            "example": "MMS_STRICTLY",
+            "example": "MMS_PREFERRED",
             "enum": [
               "AUTO",
               "SINGLE_SMS_STRICTLY",
-              "MMS_STRICTLY"
+              "MMS_PREFERRED"
             ]
           },
           "text": {
@@ -1644,11 +1679,11 @@
           "mode": {
             "description": "Determines how your message will be presented:\n\n  - **AUTO:** this means that SimpleTexting will find more relative types for your message content\n\n  - **SINGLE_SMS_STRICTLY:** this will send only a single SMS or return an error\n\n  - **MMS:** this will send a MMS or fallback SMS if MMS is not enabled by your contacts' carriers' carrier\n\n**Example:** `SINGLE_SMS_STRICTLY`\n\n`AUTO` is the default value for this field.\n\n**Example:** `SINGLE_SMS_STRICTLY`",
             "type": "string",
-            "example": "MMS_STRICTLY",
+            "example": "MMS_PREFERRED",
             "enum": [
               "AUTO",
               "SINGLE_SMS_STRICTLY",
-              "MMS_STRICTLY"
+              "MMS_PREFERRED"
             ]
           },
           "subject": {
@@ -2215,12 +2250,34 @@
       "ContactsBatchUpdateResult": {
         "type": "object",
         "properties": {
+          "status": {
+            "title": "Task status",
+            "type": "string",
+            "enum": [
+              "IN_PROGRESS",
+              "DONE"
+            ]
+          },
           "results": {
             "description": "List of update results",
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ContactUpdateResult"
             }
+          },
+          "requestedCount": {
+            "description": "Contacts count that were requested to be updated/added",
+            "title": "Total count",
+            "type": "integer",
+            "format": "int32",
+            "example": 400
+          },
+          "processedCount": {
+            "description": "Contacts count that were updated/added",
+            "title": "Processed count",
+            "type": "integer",
+            "format": "int32",
+            "example": 400
           }
         }
       },
@@ -2723,13 +2780,12 @@
                 "example": 1000
               }
             },
-            "example": 
-              {
-                "successRate": 100,
-                "optOutRate": 0,
-                "totalSent": 1000,
-                "creditsTotal": 1000
-              }
+            "example": {
+              "successRate": 100,
+              "optOutRate": 0,
+              "totalSent": 1000,
+              "creditsTotal": 1000
+            }
           },
           "trackingLinks": {
             "description": "The links that were tracked with the campaign, if available\n\n**Example:** `{\"url\": \"www.simpletexting.net\",\"clickCount\": 550}`",
@@ -2755,7 +2811,7 @@
                   "example": 550
                 }
               },
-              "example":[
+              "example": [
                 {
                   "url": "www.simpletexting.net",
                   "clickCount": 550
