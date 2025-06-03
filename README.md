@@ -10,7 +10,7 @@ I am a software developer who is passionate about the outdoors 🌱🌲, I like 
 |             |                             |                             |                             |                             |               |             
 | :---        |           :----:            |           :----:            |           :----:            |           :----:            |          ---: |
 | [NodeJS](https://nodejs.org/en/)     | [JavaScript](https://www.javascript.com/)                  | [React](https://reactjs.org/)                       | [Typescript](https://www.typescriptlang.org/) | [Netlify](https://netlify.com/)                | [OpenAI](https://www.openai.com/)        |
-| [DynamoDB](https://aws.amazon.com/dynamodb/)     | [Anthropic](https://anthropic.com/)                     | [Jest](https://jestjs.io/)                   | [Serverless](https://expressjs.com/)                  | [Firebase](https://expressjs.com/)                    | [SEED](https://expressjs.com/) | [Jest](https://expressjs.com/)          |
+| [DynamoDB](https://aws.amazon.com/dynamodb/)     | [Anthropic](https://anthropic.com/)                     | [ElevenLabs](https://elevenlabs.io/)                   | [Serverless](https://expressjs.com/)                  | [Firebase](https://expressjs.com/)                    | [SEED](https://expressjs.com/) | [Jest](https://expressjs.com/)          |
 
 
 ## I'm online 🌎
